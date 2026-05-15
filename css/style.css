@@ -61,7 +61,7 @@ body::before {
 }
 
 /* video di kanan */
-.avatar-video {
+/* .avatar-video {
   position: absolute;
   right: 0;
   top: 50%;
@@ -72,6 +72,27 @@ body::before {
   object-fit: cover;
 
   z-index: 0;
+
+  /* fade ke kiri (inti efeknya di sini) */
+  /* -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+} */ */
+
+.img-mast-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;           /* stretch dari atas ke bawah mast */
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.img-mast {
+  width: auto;
+  height: 100px;
+  display: block;
+  object-fit: cover;
 
   /* fade ke kiri (inti efeknya di sini) */
   -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
@@ -127,6 +148,7 @@ header nav a:hover { color: var(--accent); }
   position: relative;
   background: #0f0f0f; /* warna background tetap */
   overflow: hidden;
+  padding: 100px 0 80px;
 }
 
 .mast h1 {
